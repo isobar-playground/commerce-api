@@ -14,3 +14,6 @@ make composer install
 
 # Update local environment configuration
 make drush deploy
+
+# Stop environment and get ready for workspace to start it.
+make stop
