@@ -1,0 +1,107 @@
+uuid: a30d56f6-cf71-4855-b6c8-1a2a773ddb56
+langcode: en
+status: true
+dependencies:
+  config:
+    - profile.type.customer
+id: profile--customer
+disabled: false
+path: profile/customer
+resourceType: profile--customer
+resourceFields:
+  profile_id:
+    disabled: false
+    fieldName: profile_id
+    publicName: profile_id
+    enhancer:
+      id: ''
+  uuid:
+    disabled: false
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+  revision_id:
+    disabled: false
+    fieldName: revision_id
+    publicName: revision_id
+    enhancer:
+      id: ''
+  type:
+    disabled: false
+    fieldName: type
+    publicName: type
+    enhancer:
+      id: ''
+  revision_created:
+    disabled: false
+    fieldName: revision_created
+    publicName: revision_created
+    enhancer:
+      id: ''
+  revision_user:
+    disabled: false
+    fieldName: revision_user
+    publicName: revision_user
+    enhancer:
+      id: ''
+  revision_log_message:
+    disabled: false
+    fieldName: revision_log_message
+    publicName: revision_log_message
+    enhancer:
+      id: ''
+  status:
+    disabled: false
+    fieldName: status
+    publicName: status
+    enhancer:
+      id: ''
+  uid:
+    disabled: false
+    fieldName: uid
+    publicName: uid
+    enhancer:
+      id: ''
+  is_default:
+    disabled: false
+    fieldName: is_default
+    publicName: is_default
+    enhancer:
+      id: ''
+  data:
+    disabled: false
+    fieldName: data
+    publicName: data
+    enhancer:
+      id: ''
+  created:
+    disabled: false
+    fieldName: created
+    publicName: created
+    enhancer:
+      id: ''
+  changed:
+    disabled: false
+    fieldName: changed
+    publicName: changed
+    enhancer:
+      id: ''
+  revision_default:
+    disabled: false
+    fieldName: revision_default
+    publicName: revision_default
+    enhancer:
+      id: ''
+  address:
+    disabled: false
+    fieldName: address
+    publicName: address
+    enhancer:
+      id: ''
+  tax_number:
+    disabled: false
+    fieldName: tax_number
+    publicName: tax_number
+    enhancer:
+      id: ''

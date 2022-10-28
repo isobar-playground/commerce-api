@@ -1,0 +1,18 @@
+tasks:
+  - init: .gitpod/init.sh
+    command: .gitpod/command.sh
+
+ports:
+  - port: 80
+    onOpen: open-browser
+  - port: 8080
+    onOpen: ignore
+  - port: 443
+    onOpen: ignore
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: false
+
