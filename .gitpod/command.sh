@@ -1,5 +1,5 @@
-# Start the docker environment.
-make start
+# Recreate the docker environment.
+make up
 
 # Install composer dependencies.
 make composer install
