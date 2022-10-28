@@ -33,5 +33,5 @@ make drush uli
 
 - https://www.gitpod.io/
 - http://drupal.org/
-- https://github.com/wodby/docker4drupal
+- https://github.com/wodby/docker4drupal/
 - https://drupalcommerce.org/
