@@ -14,7 +14,9 @@ services:
       - ./docker/mysql/files:/docker-entrypoint-initdb.d # Place init .sql file(s) here.
     healthcheck:
       test: [ "CMD", "mysql" ,"$DB_NAME", "-h", "mysql", "-u", "$DB_USER", "-p$DB_PASSWORD", "-e", "SELECT * FROM watchdog;" ]
-      timeout: 30s
+      timeout: 1s
+      interval: 1s
+      retries: 600
     restart: unless-stopped
 
   php:
