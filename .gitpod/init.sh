@@ -1,3 +1,8 @@
+# Install acl and do magic with permissions.
+sudo apt install acl -y
+sudo setfacl -dR -m u:$(whoami):rwX -m u:1000:rwX .
+sudo setfacl -R -m u:$(whoami):rwX -m u:1000:rwX  .
+
 # Download database dump from S3.
 make database
 
