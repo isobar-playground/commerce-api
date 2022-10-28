@@ -1,3 +1,7 @@
+# Do the magic with permissions one more time.
+sudo setfacl -dR -m u:$(whoami):rwX -m u:1000:rwX .
+sudo setfacl -R -m u:$(whoami):rwX -m u:1000:rwX  .
+
 # Recreate the docker environment.
 make up
 

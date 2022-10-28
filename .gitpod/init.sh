@@ -1,5 +1,4 @@
-# Install acl and do magic with permissions.
-sudo apt install acl -y
+# Do magic with permissions.
 sudo setfacl -dR -m u:$(whoami):rwX -m u:1000:rwX .
 sudo setfacl -R -m u:$(whoami):rwX -m u:1000:rwX  .
 
