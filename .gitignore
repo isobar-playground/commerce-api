@@ -4,3 +4,6 @@
 
 # Ignore initial database dump.
 /docker/mysql/files
+
+# Ignore local docker-compose overrides.
+/docker-compose.override.yml
