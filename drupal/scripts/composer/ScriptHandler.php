@@ -9,6 +9,7 @@ namespace DrupalProject\composer;
 
 use Composer\Script\Event;
 use Composer\Semver\Comparator;
+use Drupal\Component\Utility\Crypt;
 use Drupal\Core\Site\Settings;
 use DrupalFinder\DrupalFinder;
 use Symfony\Component\Filesystem\Filesystem;
@@ -46,6 +47,33 @@ class ScriptHandler {
         'value' => Path::makeRelative($drupalFinder->getComposerRoot() . '/config/sync', $drupalRoot),
         'required' => TRUE,
       ];
+
+      if(($_SERVER['DB_NAME'] ?? FALSE) 
+        && ($_SERVER['DB_HOST'] ?? FALSE) 
+        && ($_SERVER['DB_PASSWORD'] ?? FALSE)
+        && ($_SERVER['DB_PORT'] ?? FALSE)
+        && ($_SERVER['DB_USER'] ?? FALSE)
+      ) {
+        $settings['databases']['default']['default'] = (object) [
+          'value' => [
+            'database' => $_SERVER['DB_NAME'],
+            'driver' => 'mysql',
+            'host' => $_SERVER['DB_HOST'],
+            'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+            'password' => $_SERVER['DB_PASSWORD'],
+            'port' => $_SERVER['DB_PORT'],
+            'prefix' => '',
+            'username' => $_SERVER['DB_USER'],
+          ],
+          'required' => TRUE,
+        ];
+      }
+
+      $settings['settings']['hash_salt'] = (object) [
+        'value'    => Crypt::randomBytesBase64(55),
+        'required' => TRUE,
+      ];
+
       drupal_rewrite_settings($settings, $drupalRoot . '/sites/default/settings.php');
       $fs->chmod($drupalRoot . '/sites/default/settings.php', 0666);
       $event->getIO()->write("Created a sites/default/settings.php file with chmod 0666");
