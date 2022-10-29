@@ -5,11 +5,8 @@ sudo setfacl -R -m u:$(whoami):rwX -m u:1000:rwX  .
 # Recreate the docker environment.
 make up
 
-# Install composer dependencies.
-make composer install
-
-# Update local environment configuration
-make drush deploy
+# Clear cache for new environment.
+make drush cr
 
 # Get a one-time login URL
 make drush uli
