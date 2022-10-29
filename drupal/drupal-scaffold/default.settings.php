@@ -1,6 +1,6 @@
 $settings['config_sync_directory'] = '../config/sync';
 
-if($_SERVER['MEMCACHED']) {
+if($_SERVER['MEMCACHED'] ?? FALSE) {
   $settings['memcache']['servers'] = ['memcached:11211' => 'default'];
   $settings['cache']['default'] = 'cache.backend.memcache';
 
