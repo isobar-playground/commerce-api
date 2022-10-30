@@ -9,6 +9,7 @@
 /web/libraries/
 
 # Ignore sensitive information
+/oauth/*.key
 /web/sites/*/settings.local.php
 
 # Ignore Drupal's file directory
