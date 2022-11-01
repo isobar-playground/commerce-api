@@ -1,11 +1,11 @@
-uuid: 3862dd12-09e7-46ae-9d12-335695aef37f
+uuid: 0f6397f3-ebdb-4da9-85e8-e8c188543a32
 langcode: en
 status: true
 dependencies:
   module:
     - search_api
 _core:
-  default_config_hash: vrJLX_BEpVcWa6OU7FvRAUfErBOxQBhPtzuKeNo4M2M
+  default_config_hash: DHNg3a7QdthDmUgBXKgxq-ewQd4uA9hHAmaM9vul95A
 id: search-api-index
 label: 'Information about an index'
 module: search_api
@@ -88,7 +88,7 @@ tips:
     label: 'Queue all items for reindexing'
     body: 'This will queue all items on this index for reindexing. Previously indexed data will remain on the search server, so searches on this index will continue to yield results.'
     weight: 11
-    selector: '#edit-reindex'
+    selector: .edit-reindex
   search-api-index-clear:
     id: search-api-index-clear
     plugin: text

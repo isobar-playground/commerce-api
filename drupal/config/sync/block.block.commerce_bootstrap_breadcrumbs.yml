@@ -1,0 +1,25 @@
+uuid: c163b0e6-75f3-4cdc-9f4a-cefb28a2e5a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - commerce_bootstrap
+id: commerce_bootstrap_breadcrumbs
+theme: commerce_bootstrap
+region: highlighted
+weight: -7
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: "/checkout\r\n/checkout/*"

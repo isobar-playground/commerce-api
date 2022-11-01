@@ -1,9 +1,11 @@
-# Commerce 2.x project template
+# Commerce 2.x demo project template
 
-Use [Composer](https://getcomposer.org/) to get Drupal + Commerce 2.x.
+Use [Composer](https://getcomposer.org/) to get Drupal + Commerce 2.x + demo content.
 
-Also look at [drupalcommerce/demo-project](https://github.com/drupalcommerce/demo-project)
-for a version with demo content.
+Based on [drupalcommerce/project-base](https://github.com/drupalcommerce/project-base), plus
+a [custom theme](https://drupal.org/project/belgrade) and [demo content](https://drupal.org/project/commerce_demo).
+
+![Belgrade product example](assets/belgrade-product.jpg)
 
 ## Usage
 
@@ -16,7 +18,7 @@ for your setup.
 After that you can create the project:
 
 ```
-composer create-project drupalcommerce/project-base some-dir --stability dev --no-interaction
+composer create-project drupalcommerce/demo-project demo-commerce --stability dev --no-interaction
 ```
 
 Done! Use `composer require ...` to download additional modules and themes:
@@ -29,6 +31,23 @@ composer require "drupal/devel:1.x-dev"
 The `composer create-project` command passes ownership of all files to the
 project that is created. You should create a new git repository, and commit
 all files not excluded by the .gitignore file.
+
+## Quickstart
+
+After the files are in place, go to install.php to install Drupal.
+
+Alternatively, you can use the quickstart script:
+
+```
+php scripts/quickstart
+```
+
+To reinstall:
+
+```
+php scripts/clean
+php scripts/quickstart
+```
 
 ## What does the template do?
 
@@ -117,18 +136,36 @@ section of composer.json:
 
 ### How can I add js/css libraries using composer.json?
 
-It is possible to install JavaScript libraries with Composer using custom packages as this project does. We previously relied on asset-packagist to do this but had to change our approach after the repository went defunct. Refer to [this tutorial](https://ryanszrama.com/blog/04-18-2022/replace-asset-packagist-custom-package-repositories) for more information.
+It is possible to use frontend libraries with composer thanks to the
+asset-packagist repository (https://asset-packagist.org/).
+
+For example, to use colorbox:
+```
+composer require npm-asset/colorbox:"^0.4"
+
+```
+Composer will detect new versions of the library that meet your constraints.
+In the above example it will download anything from 0.4.* series of colorbox.
+
+When managing libraries with composer this way, you may not want to add it to
+version control. In that case, add specific directories to the .gitignore file.
+```
+# Specific libraries (which we manage with composer)
+web/libraries/colorbox
+```
+
+For more details, see https://asset-packagist.org/site/about
 
 ### How do I specify a PHP version ?
 
-This project supports PHP 7.1 as minimum version (see [Drupal 8 PHP requirements](https://www.drupal.org/docs/8/system-requirements/drupal-8-php-requirements)), however it's possible that a `composer update` will upgrade some package that will then require PHP 7.1+.
+This project supports PHP 7.1 as minimum version (see [Drupal 8 PHP requirements](https://www.drupal.org/docs/8/system-requirements/drupal-8-php-requirements)), however it's possible that a `composer update` will upgrade some package that will then require PHP 7+.
 
 To prevent this you can add this code to specify the PHP version you want to use in the `config` section of `composer.json`:
 ```json
 "config": {
     "sort-packages": true,
     "platform": {
-        "php": "7.1.21"
+        "php": "7.1"
     }
 },
 ```

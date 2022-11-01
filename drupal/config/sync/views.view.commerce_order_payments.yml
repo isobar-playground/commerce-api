@@ -1,4 +1,4 @@
-uuid: 3fd0ad2a-4631-492e-a09e-bf950536438c
+uuid: 1342851b-8350-427b-8792-a8ada9289348
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
     - options
     - user
 _core:
-  default_config_hash: TICjuOuchM8QjSSHQk59Iz0asLe1X_QTh5oDyMmjNhA
+  default_config_hash: 5t0kPfQgqy4faetT297hd9t3E16N_c6JMAycthtc25E
 id: commerce_order_payments
 label: Payments
 module: views

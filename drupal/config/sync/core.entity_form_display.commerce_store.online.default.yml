@@ -1,4 +1,4 @@
-uuid: 4214df2a-e4dc-4454-8c38-92cfe6135945
+uuid: 1a38e13c-84d5-4a03-9c05-12668db29c70
 langcode: en
 status: true
 dependencies:
@@ -74,6 +74,12 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  shipping_countries:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
     third_party_settings: {  }
   tax_registrations:
     type: options_select

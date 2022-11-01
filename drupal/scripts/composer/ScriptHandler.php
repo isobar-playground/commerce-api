@@ -48,8 +48,8 @@ class ScriptHandler {
         'required' => TRUE,
       ];
 
-      if(($_SERVER['DB_NAME'] ?? FALSE) 
-        && ($_SERVER['DB_HOST'] ?? FALSE) 
+      if(($_SERVER['DB_NAME'] ?? FALSE)
+        && ($_SERVER['DB_HOST'] ?? FALSE)
         && ($_SERVER['DB_PASSWORD'] ?? FALSE)
         && ($_SERVER['DB_PORT'] ?? FALSE)
         && ($_SERVER['DB_USER'] ?? FALSE)

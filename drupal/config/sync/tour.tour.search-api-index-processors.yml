@@ -1,11 +1,11 @@
-uuid: a11b3f31-83a9-4141-a1f6-b9ee54cc0bd4
+uuid: 8da3fb08-2b5b-4b8c-b568-f8620a8a639d
 langcode: en
 status: true
 dependencies:
   module:
     - search_api
 _core:
-  default_config_hash: LqXAZO_yZPho3Pueh85e-NzQ3DmI5rNBf6_q8McKUqc
+  default_config_hash: vs6bUgjvoJIdOBQIcX2l2Dp6BXpVFbs-h6PsKOmZfYk
 id: search-api-index-processors
 label: 'Processors used for this index'
 module: search_api
@@ -39,4 +39,4 @@ tips:
     label: 'Processor settings'
     body: 'Some processors have additional configuration available, which you are able to change here.'
     weight: 4
-    selector: .form-type-vertical-tabs
+    selector: .form-type--vertical-tabs

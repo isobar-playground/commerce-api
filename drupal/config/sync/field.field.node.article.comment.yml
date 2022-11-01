@@ -1,4 +1,4 @@
-uuid: 73cd60e4-7ae4-493f-98ee-ec25b73cbab2
+uuid: 62cf032a-dc6d-4990-a047-db49ce2c0635
 langcode: en
 status: true
 dependencies:
@@ -8,14 +8,14 @@ dependencies:
   module:
     - comment
 _core:
-  default_config_hash: r-hrxwbKKXBKQnBefGjXNSdU00u2fPvMWEykGRHqd10
+  default_config_hash: szSOp-8eNsMcuh8usDre1x76RhDKaPhNUuwzRX5cgv4
 id: node.article.comment
 field_name: comment
 entity_type: node
 bundle: article
 label: Comments
 description: ''
-required: false
+required: true
 translatable: true
 default_value:
   -

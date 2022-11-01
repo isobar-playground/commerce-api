@@ -1,4 +1,4 @@
-uuid: 618dd719-3199-4a37-9873-b181bc0d44db
+uuid: 8739b6dd-9b06-493b-bf1e-e0aaac40b107
 langcode: en
 status: true
 dependencies:
@@ -18,10 +18,10 @@ mode: search_index
 content:
   body:
     type: text_default
-    label: hidden
+    weight: 0
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    label: hidden
     region: content
 hidden:
   langcode: true

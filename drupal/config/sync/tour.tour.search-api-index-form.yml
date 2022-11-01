@@ -1,11 +1,11 @@
-uuid: d68b7a17-303d-4a68-b737-6d72da6f450c
+uuid: e931b48d-a583-45d4-973d-255fda03cd57
 langcode: en
 status: true
 dependencies:
   module:
     - search_api
 _core:
-  default_config_hash: TK3PjpP4I6WFh5JDY_L_c5XCiTyAZBBA9z0M9pcGjzo
+  default_config_hash: sQzCtjeNBZnQCDro5e8B7_KNpDYVoetYDs4iaf1xBOA
 id: search-api-index-form
 label: 'Add or edit a Search API index'
 module: search_api

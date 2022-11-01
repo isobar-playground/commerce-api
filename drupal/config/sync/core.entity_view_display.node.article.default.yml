@@ -1,4 +1,4 @@
-uuid: 13a006d2-abca-49ce-8f5b-45feb0161fd6
+uuid: 4baded8e-090c-4848-b35a-107a35e211b5
 langcode: en
 status: true
 dependencies:
@@ -16,7 +16,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
+  default_config_hash: qChSDTxZgfn0N19FXxZL21DuKM3zAPAh6_Nel9oDWKQ
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -33,7 +33,6 @@ content:
     type: comment_default
     label: above
     settings:
-      view_mode: default
       pager_id: 0
     third_party_settings: {  }
     weight: 110
@@ -58,10 +57,9 @@ content:
     weight: 10
     region: content
   links:
-    settings: {  }
-    third_party_settings: {  }
     weight: 100
     region: content
 hidden:
+  field_tags: true
   langcode: true
   search_api_excerpt: true

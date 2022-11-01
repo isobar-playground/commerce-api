@@ -1,4 +1,4 @@
-uuid: fbca7ea7-0a99-45a5-b8a9-fce814521fae
+uuid: 94c147e0-6c75-4ca3-b488-1eb79b7cced2
 langcode: en
 status: true
 dependencies:
@@ -30,6 +30,7 @@ hidden:
   name: true
   prices_include_tax: true
   search_api_excerpt: true
+  shipping_countries: true
   tax_registrations: true
   timezone: true
   uid: true
