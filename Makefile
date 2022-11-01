@@ -89,6 +89,14 @@ logs:
 database:
 	docker-compose run -u 0 mysql wget https://isobar-playground.s3.eu-central-1.amazonaws.com/commerce-api-init.sql -O /docker-entrypoint-initdb.d/init.sql
 
+## files : download initial media files dump from S3
+.PHONY: files
+files:
+	wget https://isobar-playground.s3.eu-central-1.amazonaws.com/commerce-api-files.zip
+	mkdir -p drupal/web/sites/default/files
+	unzip -o commerce-api-files.zip -d drupal/web/sites/default/files
+	rm -rf commerce-api-files.zip
+
 # https://stackoverflow.com/a/6273809/1826109
 %:
 	@:
